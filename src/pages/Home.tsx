@@ -1,5 +1,3 @@
-// npm
-
 // files
 import CategoryItem from "../components/CategoryItem";
 import data from "../data/categories.json";

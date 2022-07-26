@@ -1,5 +1,5 @@
 // npm
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 
 // files
 import data from "../data/menu.json";
@@ -9,6 +9,7 @@ import ProductItem from "../components/ProductItem";
 export default function Product() {
   // properties
   const { slug } = useParams();
+  const navigate = useNavigate();
 
   // components
   const filteredItems = data.filter((item) => item.slug === slug);
@@ -17,14 +18,15 @@ export default function Product() {
     <ProductItem item={item} key={item.id} />
   ));
 
-  const nutrientDetails = filteredItems.map((item) => (
+  const nutrients = filteredItems.map((item) => (
     <Nutrients item={item} key={item.id} />
   ));
 
   return (
     <div>
       {productDetails}
-      {nutrientDetails}
+      {nutrients}
+      <button onClick={() => navigate(-1)}>Go back</button>
     </div>
   );
 }
