@@ -9,6 +9,8 @@ import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
 import Product from "./pages/Product";
 
+import "./styles/main.scss";
+
 export default function App() {
   return (
     <div className="App">
