@@ -3,22 +3,38 @@ import { Link } from "react-router-dom";
 
 export default function Navbar() {
   return (
-    <nav>
-      <Link to={"/"} style={{ padding: "1rem" }}>
-        home
-      </Link>
-      <Link to={"category/dishes"} style={{ padding: "1rem" }}>
-        dishes
-      </Link>
-      <Link to={"category/dessert"} style={{ padding: "1rem" }}>
-        dessert
-      </Link>
-      <Link to={"category/drink"} style={{ padding: "1rem" }}>
-        drinks
-      </Link>
-      <Link to={"contact"} style={{ padding: "1rem" }}>
-        contact
-      </Link>
+    <nav className="nav">
+      <div className="nav__wrapper">
+        <div className="nav__wrapper--inner">
+          <button className="burger">
+            <div className="burger__line" />
+            <div className="burger__line" />
+            <div className="burger__line" />
+          </button>
+
+          <ul className="nav__links">
+            <Link to={"category/dishes"} className="link">
+              Dishes
+            </Link>
+            <Link to={"category/dessert"} className="link">
+              Dessert
+            </Link>
+            <Link to={"category/drink"} className="link">
+              Drinks
+            </Link>
+          </ul>
+          <ul>
+            <Link to={"contact"} className="link btn">
+              contact
+            </Link>
+          </ul>
+        </div>
+        <div className="nav__wrapper--outer">
+          <Link to={"/"} className="link logo">
+            vegarian
+          </Link>
+        </div>
+      </div>
     </nav>
   );
 }

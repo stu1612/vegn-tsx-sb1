@@ -11,12 +11,12 @@ export default function Home() {
   ));
 
   return (
-    <div className="home">
-      <div className="hero">
-        <img src={img} alt="" />
-      </div>
+    <main className="home">
+      <section className="hero">
+        <img src={img} alt="vegan foods on display" />
+      </section>
 
       {categoryItems}
-    </div>
+    </main>
   );
 }

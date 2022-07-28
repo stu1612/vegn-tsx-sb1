@@ -13,17 +13,15 @@ import "./styles/main.scss";
 
 export default function App() {
   return (
-    <div className="App">
-      <BrowserRouter>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="category/:title" element={<Category />} />
-          <Route path="category/:title/:slug" element={<Product />} />
-          <Route path="contact" element={<Contact />} />
-        </Routes>
-        <Footer />
-      </BrowserRouter>
-    </div>
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="category/:title" element={<Category />} />
+        <Route path="category/:title/:slug" element={<Product />} />
+        <Route path="contact" element={<Contact />} />
+      </Routes>
+      {/* <Footer /> */}
+    </BrowserRouter>
   );
 }
