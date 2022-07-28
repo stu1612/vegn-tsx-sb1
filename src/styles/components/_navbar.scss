@@ -23,6 +23,7 @@
       top: 50%;
       left: 50%;
       @include a.flex(row, center, center);
+      display: none;
     }
 
     .burger {
@@ -45,4 +46,8 @@
       text-transform: capitalize;
     }
   }
+}
+
+.scroll-bg {
+  background: a.$primary-color-300;
 }

@@ -1,9 +1,47 @@
 // npm
+import { useCallback, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { motion, useScroll } from "framer-motion";
 
 export default function Navbar() {
+  const [hidden, setHidden] = useState<boolean>(false);
+  const [showLogo, setShowLogo] = useState<boolean>(false);
+  const { scrollY } = useScroll() as any;
+
+  const updateScrollPosition = useCallback(() => {
+    if (scrollY?.current < scrollY?.prev) {
+      setHidden(false);
+      setShowLogo(true);
+    } else if (scrollY?.current > 100 && scrollY?.current > scrollY?.prev) {
+      setHidden(true);
+      setShowLogo(true);
+    }
+  }, [scrollY]);
+
+  useEffect(() => {
+    return scrollY.onChange(() => updateScrollPosition());
+  }, [scrollY, updateScrollPosition]);
+
+  const variants = {
+    visible: {
+      opacity: 1,
+      y: 0,
+      display: "flex",
+    },
+    hidden: {
+      opacity: 0,
+      y: -25,
+      display: "none",
+    },
+  };
+
   return (
-    <nav className="nav">
+    <motion.nav
+      className={`nav ${showLogo ? "scroll-bg" : "none"}`}
+      variants={variants}
+      animate={hidden ? "hidden" : "visible"}
+      transition={{ ease: "easeInOut", duration: 0.3 }}
+    >
       <div className="nav__wrapper">
         <div className="nav__wrapper--inner">
           <button className="burger">
@@ -29,12 +67,16 @@ export default function Navbar() {
             </Link>
           </ul>
         </div>
-        <div className="nav__wrapper--outer">
+        <motion.div
+          className="nav__wrapper--outer"
+          variants={variants}
+          animate={showLogo ? "visible" : "hidden"}
+        >
           <Link to={"/"} className="link logo">
             vegarian
           </Link>
-        </div>
+        </motion.div>
       </div>
-    </nav>
+    </motion.nav>
   );
 }
