@@ -1,4 +1,13 @@
+@use "../abstracts" as a;
+
 .category-item {
-  width: 70%;
-  margin: 0 auto;
+  width: min(80%, 1200px);
+  margin: 7rem auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+  &__content {
+    @include a.flex(column, flex-start, center);
+    margin-left: 2rem;
+  }
 }

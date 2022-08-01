@@ -12,8 +12,8 @@ export default function CategoryItem({ category }: iProps) {
   return (
     <div className="category-item">
       <img src={require(`../assets/images/category/${image}`)} alt={title} />
-      <h1>{title}</h1>
       <div className="category-item__content">
+        <h1>{title}</h1>
         <p>{content}</p>
         <Link to={`category/${title}`}>
           <button>View</button>

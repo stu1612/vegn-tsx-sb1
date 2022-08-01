@@ -3,10 +3,17 @@ import { useCallback, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { motion, useScroll } from "framer-motion";
 
+// files
+import MenuButton from "./MenuButton";
+
 export default function Navbar() {
   const [hidden, setHidden] = useState<boolean>(false);
   const [showLogo, setShowLogo] = useState<boolean>(false);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+
   const { scrollY } = useScroll() as any;
+  let navVariant = {};
+  const isMobile = window.innerWidth < 768;
 
   const updateScrollPosition = useCallback(() => {
     if (scrollY?.current < scrollY?.prev) {
@@ -22,54 +29,51 @@ export default function Navbar() {
     return scrollY.onChange(() => updateScrollPosition());
   }, [scrollY, updateScrollPosition]);
 
-  const variants = {
-    visible: {
-      opacity: 1,
-      y: 0,
-      display: "flex",
-    },
-    hidden: {
-      opacity: 0,
-      y: -25,
-      display: "none",
-    },
-  };
+  if (!isMobile) {
+    navVariant = {
+      visible: {
+        opacity: 1,
+        y: 0,
+        display: "flex",
+      },
+      hidden: {
+        opacity: 0,
+        y: -25,
+        display: "none",
+      },
+    };
+  }
 
   return (
     <motion.nav
-      className={`nav ${showLogo ? "scroll-bg" : "none"}`}
-      variants={variants}
+      className={`nav ${showLogo ? "scroll-bg" : ""} ${isOpen ? "mobile" : ""}`}
+      variants={navVariant}
       animate={hidden ? "hidden" : "visible"}
       transition={{ ease: "easeInOut", duration: 0.3 }}
     >
       <div className="nav__wrapper">
         <div className="nav__wrapper--inner">
-          <button className="burger">
-            <div className="burger__line" />
-            <div className="burger__line" />
-            <div className="burger__line" />
-          </button>
-
-          <ul className="nav__links">
-            <Link to={"category/dishes"} className="link">
-              Dishes
-            </Link>
-            <Link to={"category/dessert"} className="link">
-              Dessert
-            </Link>
-            <Link to={"category/drink"} className="link">
-              Drinks
-            </Link>
-          </ul>
-          <ul>
-            <Link to={"contact"} className="link btn">
-              contact
-            </Link>
+          <MenuButton isOpen={isOpen} setIsOpen={setIsOpen} />
+          <ul className={`links ${isOpen ? "links-mobile" : ""}`}>
+            <div>
+              <Link to={"category/dishes"} className="link">
+                Dishes
+              </Link>
+              <Link to={"category/dessert"} className="link">
+                Dessert
+              </Link>
+              <Link to={"category/drink"} className="link">
+                Drinks
+              </Link>
+              <Link to={"contact"} className="link btn">
+                contact
+              </Link>
+            </div>
           </ul>
         </div>
         <motion.div
           className="nav__wrapper--outer"
-          variants={variants}
+          variants={navVariant}
           animate={showLogo ? "visible" : "hidden"}
         >
           <Link to={"/"} className="link logo">

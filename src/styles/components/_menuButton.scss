@@ -1,0 +1,21 @@
+@use "../abstracts" as a;
+
+.burger {
+  height: auto;
+  cursor: pointer;
+  z-index: 10;
+
+  &__line {
+    height: 0.2rem;
+    width: 3.5rem;
+    margin: 0.5rem 0;
+    background: a.$tertiary-color-300;
+    border-radius: 4px;
+  }
+}
+
+@include a.media-lg {
+  .burger {
+    display: none;
+  }
+}

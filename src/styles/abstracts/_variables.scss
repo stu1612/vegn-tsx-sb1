@@ -1,11 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,600;1,400;1,600&family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,600;1,400;1,600&family=Inter:wght@100;200;300&family=Pacifico&display=swap");
 
 // colors
 $primary-color-300: #9dbe55;
 $primary-color-500: #85a63f;
 $primary-color-700: #6b8533;
 $secondary-color-300: #fbc72d;
-$seconday-color-500: #f2b705;
+$secondary-color-500: #f2b705;
 $secondary-color-700: #c39304;
 $tertiary-color-300: #c41837;
 $tertiary-color-500: #a6142f;
@@ -27,3 +27,4 @@ $grey-900: #1f260f;
 // fonts
 $text: "Cabin", helvetica, sans-serif;
 $heading: "Pacifico", cursive;
+$special: "Inter", sans-serif; ;
