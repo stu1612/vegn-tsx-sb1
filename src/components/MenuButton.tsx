@@ -1,6 +1,9 @@
 // npm
 import { motion } from "framer-motion";
 
+// files
+import { top, center, bottom } from "../animations/variants";
+
 interface iProps {
   isOpen: boolean;
   setIsOpen: React.Dispatch<React.SetStateAction<any>>;
@@ -11,37 +14,6 @@ export default function MenuButton({ isOpen, setIsOpen }: iProps) {
   function toggleNav() {
     setIsOpen(!isOpen);
   }
-
-  const top = {
-    open: {
-      opacity: [0, 1],
-      rotate: 180,
-    },
-    closed: {
-      opacity: 1,
-    },
-  };
-
-  const center = {
-    open: {
-      opacity: 0,
-      width: "2.5rem",
-    },
-    closed: {
-      opacity: 1,
-    },
-  };
-
-  const bottom = {
-    open: {
-      opacity: [0, 1],
-      rotate: -180,
-      width: "1.5rem",
-    },
-    closed: {
-      opacity: 1,
-    },
-  };
 
   return (
     <motion.button

@@ -1,8 +1,11 @@
+@use "../abstracts" as a;
+
 .hero {
   position: relative;
 
   h1 {
     position: absolute;
+    font-size: 3.8rem;
     left: 50%;
     top: 20%;
     transform: translate(-50%, -50%);
@@ -12,5 +15,13 @@
     object-fit: cover;
     width: 100%;
     object-position: 0 10%;
+  }
+}
+
+@include a.media-md {
+  .hero {
+    h1 {
+      font-size: 6.8rem;
+    }
   }
 }

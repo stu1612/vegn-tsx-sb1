@@ -1,0 +1,26 @@
+[
+  {
+    "id": 0,
+    "title": "Dishes",
+    "link": "category/dishes",
+    "class": "link"
+  },
+  {
+    "id": 1,
+    "title": "Dessert",
+    "link": "category/dessert",
+    "class": "link"
+  },
+  {
+    "id": 2,
+    "title": "Drinks",
+    "link": "category/drinks",
+    "class": "link"
+  },
+  {
+    "id": 3,
+    "title": "Contact",
+    "link": "contact",
+    "class": "link btn"
+  }
+]
