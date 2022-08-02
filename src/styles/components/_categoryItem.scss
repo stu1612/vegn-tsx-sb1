@@ -1,13 +1,58 @@
 @use "../abstracts" as a;
 
 .category-item {
-  width: min(80%, 1200px);
+  @include a.screen-width-lg;
   margin: 7rem auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 5rem;
 
   &__content {
     @include a.flex(column, flex-start, center);
-    margin-left: 2rem;
+
+    p {
+      margin: 2rem 0;
+    }
+  }
+}
+
+.sub-grid {
+  @include a.screen-width-lg;
+  margin: 7rem auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 1rem;
+  background-color: red;
+
+  .col {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    &__img {
+      align-items: center;
+    }
+
+    &__text {
+      align-items: flex-start;
+    }
+  }
+
+  &__content {
+    @include a.flex(column, flex-start, center);
+
+    p {
+      margin: 2rem 0;
+    }
+  }
+}
+
+@include a.media-sm {
+  .category-item {
+    grid-auto-flow: dense;
+
+    &:nth-child(2n + 1) > div:first-child {
+      grid-column: 2;
+    }
   }
 }

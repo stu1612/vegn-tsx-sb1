@@ -3,24 +3,27 @@
     "id": 0,
     "title": "Dishes",
     "link": "category/dishes",
-    "class": ""
+    "image": "dishes_lg.jpg",
+    "class": "link"
   },
   {
     "id": 1,
     "title": "Dessert",
     "link": "category/dessert",
-    "class": ""
+    "image": "dessert_lg.jpg",
+    "class": "link"
   },
   {
     "id": 2,
     "title": "Drinks",
     "link": "category/drink",
-    "class": ""
+    "image": "drinks_lg.jpg",
+    "class": "link"
   },
   {
     "id": 3,
     "title": "Contact",
     "link": "contact",
-    "class": " btn"
+    "class": "link-btn btn"
   }
 ]

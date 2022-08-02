@@ -45,10 +45,9 @@ export default function Home() {
         >
           Vegarian
         </motion.h1>
-        <img src={img} alt="vegan foods on display" />
+        <img className="home-img" src={img} alt="vegan foods on display" />
         <Wave />
       </section>
-
       {categoryItems}
     </main>
   );

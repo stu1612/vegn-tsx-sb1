@@ -7,14 +7,24 @@
     position: absolute;
     font-size: 3.8rem;
     left: 50%;
-    top: 20%;
+    top: 50%;
     transform: translate(-50%, -50%);
   }
-  img {
+
+  .bright {
+    color: a.$primary-color-300;
+  }
+  .home-img {
     height: 100vh;
     object-fit: cover;
     width: 100%;
     object-position: 0 10%;
+  }
+
+  .category-img {
+    @extend .home-img;
+    object-position: center;
+    filter: brightness(0.5);
   }
 }
 
