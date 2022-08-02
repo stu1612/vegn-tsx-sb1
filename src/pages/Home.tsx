@@ -7,6 +7,7 @@ import CategoryItem from "../components/CategoryItem";
 import data from "../data/categories.json";
 // images
 import img from "../assets/images/general/hero.jpg";
+import Wave from "../components/Wave";
 
 export default function Home() {
   const [hidden, setHidden] = useState<boolean>(false);
@@ -45,6 +46,7 @@ export default function Home() {
           Vegarian
         </motion.h1>
         <img src={img} alt="vegan foods on display" />
+        <Wave />
       </section>
 
       {categoryItems}

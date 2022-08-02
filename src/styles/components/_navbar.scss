@@ -24,7 +24,7 @@
       @include a.flex(row, center, center);
     }
 
-    .link {
+    a {
       padding: 0 1rem;
     }
   }
@@ -95,5 +95,6 @@
   }
   .links div {
     display: flex;
+    align-items: center;
   }
 }

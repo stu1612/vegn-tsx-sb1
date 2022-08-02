@@ -5,6 +5,10 @@
   justify-content: $justify;
 }
 
+@mixin transition-ease {
+  transition: all 0.3s ease-in-out;
+}
+
 @mixin media-md {
   @media screen and (min-width: 768px) {
     @content;

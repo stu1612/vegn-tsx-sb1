@@ -35,7 +35,12 @@ export default function Navbar() {
 
   // components
   const navLinks = data.map((links) => (
-    <Link to={links.link} className={links.class} key={links.id}>
+    <Link
+      to={links.link}
+      className={links.class}
+      key={links.id}
+      onClick={() => setIsOpen(false)}
+    >
       {links.title}
     </Link>
   ));

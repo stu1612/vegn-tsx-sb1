@@ -1,11 +1,13 @@
 // base
 @import "./base/reset";
 @import "./base/typography";
+@import "./base/buttons";
 
 // components
 @import "./components/navbar";
 @import "./components/categoryItem";
 @import "./components/menuButton";
+@import "./components/wave";
 
 // layout
 @import "./layout/hero";

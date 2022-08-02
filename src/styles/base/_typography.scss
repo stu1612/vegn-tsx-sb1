@@ -19,7 +19,8 @@ p {
   line-height: 1.1;
 }
 
-a {
+a,
+button {
   text-decoration: none;
   color: inherit;
   font-family: a.$special;
@@ -28,8 +29,4 @@ a {
   letter-spacing: 0.3rem;
   font-size: 1.6rem;
   transition: color 0.3s ease-in-out;
-
-  &:hover {
-    color: a.$grey-500;
-  }
 }
