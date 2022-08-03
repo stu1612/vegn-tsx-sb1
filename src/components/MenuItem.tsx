@@ -14,15 +14,15 @@ export default function MenuItem({ item }: iProps) {
         <img
           src={require(`../assets/images/menu/${thumbnail}`)}
           alt={subtitle}
-          style={{ height: "250px", width: "250px" }}
+          className="card-img menu-img"
         />
       </div>
       <div className="col col__text">
-        <h1>{subtitle}</h1>
+        <h1 className="card-title">{subtitle}</h1>
         <div className="category-item__content">
           <p>{body}</p>
           <Link to={`${slug}`}>
-            <button>View</button>
+            <button className="btn">View</button>
           </Link>
         </div>
       </div>

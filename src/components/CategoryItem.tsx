@@ -21,7 +21,7 @@ export default function CategoryItem({ category }: iProps) {
         />
       </div>
       <div className="category-item__content col">
-        <h1>{title}</h1>
+        <h1 className="card-title">{title}</h1>
         <p>{content}</p>
         <Link to={`category/${title}`} state={image}>
           <button className="btn">View</button>
