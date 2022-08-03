@@ -1,4 +1,25 @@
-.card-img {
+@use "../abstracts" as a;
+
+.banner {
+  height: 100vh;
+  object-fit: cover;
+  width: 100%;
+  object-position: 0 10%;
+}
+
+.sub-banner {
+  @extend .banner;
+  object-position: center;
+  filter: brightness(0.5);
+}
+
+.shadow {
   box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
   border-radius: 8px;
+}
+
+@include a.media-lg {
+  .img-350 {
+    height: 350px;
+  }
 }

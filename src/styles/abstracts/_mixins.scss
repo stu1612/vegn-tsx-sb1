@@ -5,6 +5,12 @@
   justify-content: $justify;
 }
 
+@mixin grid-card {
+  display: grid;
+  margin: 7rem auto;
+  grid-gap: 5rem;
+}
+
 @mixin transition-ease {
   transition: all 0.3s ease-in-out;
 }

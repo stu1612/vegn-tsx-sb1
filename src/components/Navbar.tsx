@@ -15,8 +15,6 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   // properties
-  // const [navData] = useState({});
-
   const { scrollY } = useScroll() as any;
   const isMobile = window.innerWidth < 1024;
 

@@ -1,5 +1,4 @@
 // npm
-import { useState } from "react";
 import { Link } from "react-router-dom";
 
 interface iProps {
@@ -9,18 +8,17 @@ interface iProps {
 export default function CategoryItem({ category }: iProps) {
   // properties
   const { title, content, image } = category;
-  // const [categoryData] = useState(category);
 
   return (
-    <section className="category-item grid">
-      <div className="col">
+    <section className="grid">
+      <div>
         <img
           src={require(`../assets/images/category/${image}`)}
           alt={title}
-          className="card-img"
+          className="shadow"
         />
       </div>
-      <div className="category-item__content col">
+      <div className="grid__content">
         <h1 className="card-title">{title}</h1>
         <p>{content}</p>
         <Link to={`category/${title}`} state={image}>

@@ -10,21 +10,19 @@ export default function MenuItem({ item }: iProps) {
 
   return (
     <div className="sub-grid">
-      <div className="col  col__img">
+      <div className="sub-grid__img">
         <img
           src={require(`../assets/images/menu/${thumbnail}`)}
           alt={subtitle}
-          className="card-img menu-img"
+          className="shadow img-350"
         />
       </div>
-      <div className="col col__text">
+      <div className="sub-grid__content">
         <h1 className="card-title">{subtitle}</h1>
-        <div className="category-item__content">
-          <p>{body}</p>
-          <Link to={`${slug}`}>
-            <button className="btn">View</button>
-          </Link>
-        </div>
+        <p>{body}</p>
+        <Link to={`${slug}`}>
+          <button className="btn">View</button>
+        </Link>
       </div>
     </div>
   );

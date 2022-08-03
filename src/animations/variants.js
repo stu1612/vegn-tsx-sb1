@@ -11,6 +11,13 @@ export const navVariant = {
   },
 };
 
+export const hideTitle = {
+  visible: {
+    opacity: 1,
+  },
+  hidden: { opacity: 0 },
+};
+
 export const top = {
   open: {
     opacity: [0, 1],

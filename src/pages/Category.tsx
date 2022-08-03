@@ -22,17 +22,17 @@ export default function Category() {
     .map((item) => <MenuItem item={item} key={item.id} />);
 
   return (
-    <main className="category">
+    <main>
       <section className="hero">
         <img
-          className="category-img"
+          className="sub-banner"
           src={require(`../assets/images/category/${image}`)}
           alt={title}
         />
         <h1 className="bright">{title}</h1>
         <Wave />
       </section>
-      <div>{menuItems}</div>
+      {menuItems}
     </main>
   );
 }

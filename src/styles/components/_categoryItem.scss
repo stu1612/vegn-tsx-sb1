@@ -1,11 +1,9 @@
 @use "../abstracts" as a;
 
-.category-item {
+.grid {
   @include a.screen-width-lg;
-  margin: 7rem auto;
-  display: grid;
+  @include a.grid-card;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 5rem;
 
   &__content {
     @include a.flex(column, flex-start, center);
@@ -18,23 +16,11 @@
 
 .sub-grid {
   @include a.screen-width-lg;
-  margin: 7rem auto;
-  display: grid;
+  @include a.grid-card;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-gap: 5rem;
 
-  .col {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-
-    &__img {
-      align-items: center;
-    }
-
-    &__text {
-      align-items: flex-start;
-    }
+  &__img {
+    @include a.flex(column, center, center);
   }
 
   &__content {
@@ -51,7 +37,7 @@
 }
 
 @include a.media-sm {
-  .category-item {
+  .grid {
     grid-auto-flow: dense;
 
     &:nth-child(2n + 1) > div:first-child {
@@ -60,11 +46,5 @@
   }
   .card-title {
     font-size: 2.6rem;
-  }
-}
-
-@include a.media-lg {
-  .menu-img {
-    height: 350px;
   }
 }
