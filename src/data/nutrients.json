@@ -1,0 +1,38 @@
+[
+  {
+    "id": 0,
+    "tx_1": "Calories 200",
+    "tx_2": "Calories from Fat 78"
+  },
+  {
+    "id": 1,
+    "tx_1": "% Daily Value"
+  },
+  {
+    "id": 2,
+    "tx_1": "Total Fat",
+    "tx_2": "9g",
+    "tx_3": "Saturated Fat 3g"
+  },
+  {
+    "id": 3,
+    "tx_1": "Cholestral",
+    "tx_2": "20g"
+  },
+  {
+    "id": 4,
+    "tx_1": "Sodium",
+    "tx_2": "358g"
+  },
+  {
+    "id": 5,
+    "tx_1": "Total Carbohydrate",
+    "tx_2": "21g",
+    "tx_3": "Dietery Fiber 1g",
+    "tx_4": "Sugars 8g"
+  },
+  {
+    "id": 6,
+    "tx_1": "Protein 8mg"
+  }
+]

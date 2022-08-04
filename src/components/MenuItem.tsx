@@ -20,7 +20,7 @@ export default function MenuItem({ item }: iProps) {
       <div className="sub-grid__content">
         <h1 className="card-title">{subtitle}</h1>
         <p>{body}</p>
-        <Link to={`${slug}`}>
+        <Link to={`${slug}`} state={thumbnail}>
           <button className="btn">View</button>
         </Link>
       </div>

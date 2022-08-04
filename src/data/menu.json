@@ -5,7 +5,7 @@
     "subtitle": "Ricotta & Spinach Pizza",
     "slug": "ricotta-spinach-pizza",
     "body": "When it comes to vegan pizza, nothing compares to this delicious classic.  Spinach, Ricotta topped with caramelizad onion",
-    "thumbnail": "pizza.jpg",
+    "thumbnail": "dish1.jpg",
     "ingredients": [
       "Almond ricotta",
       "Spinach",
@@ -21,7 +21,7 @@
     "subtitle": "Mediterranean Wraps",
     "slug": "mediterranean-wraps",
     "body": "These vegan mediterranean wraps are filled with smashed chickpeas, crunchy colourful vegetables and a creamy tzatziki sauce",
-    "thumbnail": "wraps.jpg",
+    "thumbnail": "dish2.jpg",
     "ingredients": [
       "Chickpea flour",
       "Cucumber",
@@ -37,7 +37,7 @@
     "subtitle": "Carrot & Coriander Soup",
     "slug": "carrot-coriander-soup",
     "body": "Simple ingredients combined to offer up a delicious and healthy dish",
-    "thumbnail": "soup.jpg",
+    "thumbnail": "dish3.jpg",
     "ingredients": ["Carrots", "Coriander", "Ginger", "Potatoes", "Lemon"],
     "nutrients": ["18%", "6%", "4%", "12%", "3%", "8%"]
   },
@@ -47,7 +47,7 @@
     "subtitle": "Avacado Hummus Sandwich",
     "slug": "avacado-hummus-sandwich",
     "body": "This vegan sandwich is stacked with veggies and is a tasty powerhouse of nutrients",
-    "thumbnail": "macka.jpg",
+    "thumbnail": "dish4.jpg",
     "ingredients": [
       "Avacado",
       "Hummus",

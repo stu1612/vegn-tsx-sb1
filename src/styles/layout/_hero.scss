@@ -16,6 +16,16 @@
   }
 }
 
+.sub-hero {
+  position: relative;
+  @include a.screen-width-md;
+  margin: 0 auto;
+
+  h1 {
+    font-size: 3.8rem;
+  }
+}
+
 @include a.media-md {
   .hero {
     h1 {

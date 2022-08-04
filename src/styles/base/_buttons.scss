@@ -11,3 +11,20 @@
     color: a.$grey-100;
   }
 }
+
+.btn-dropdown {
+  width: min(100%, 400px);
+  font-weight: 400;
+  padding: 2rem 0;
+  background: a.$primary-color-300;
+  @include a.flex(row, center, center);
+
+  .icon {
+    padding: 0 2rem;
+    color: a.$grey-900;
+  }
+}
+
+.selected {
+  background: a.$primary-color-700;
+}

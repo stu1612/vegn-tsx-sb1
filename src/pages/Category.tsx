@@ -25,7 +25,7 @@ export default function Category() {
     <main>
       <section className="hero">
         <img
-          className="sub-banner"
+          className="secondary-banner"
           src={require(`../assets/images/category/${image}`)}
           alt={title}
         />

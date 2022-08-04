@@ -1,0 +1,74 @@
+@use "../abstracts" as a;
+
+.content {
+  @include a.flex(column, center, center);
+  margin: 5rem 0;
+  text-align: center;
+
+  p {
+    font-size: 2.6rem;
+    margin: 2rem 0;
+  }
+
+  .ingredients {
+    width: min(100%, 400px);
+    background: a.$primary-color-300;
+  }
+}
+
+#nutrients {
+  width: min(100%, 400px);
+  margin: 0 auto;
+
+  .nutrients {
+    background-color: a.$primary-color-300;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 2rem;
+  }
+  p {
+    font-size: 1.2rem;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .white-bg {
+    background-color: a.$grey-100;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 15px;
+  }
+
+  .end {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .inline {
+    margin-left: 2rem;
+  }
+
+  .light {
+    color: a.$grey-700;
+    background: transparent;
+  }
+
+  .bold {
+    font-weight: 600;
+  }
+}
+
+@include a.media-md {
+  #nutrients {
+    p {
+      font-size: 1.6rem;
+    }
+  }
+}
