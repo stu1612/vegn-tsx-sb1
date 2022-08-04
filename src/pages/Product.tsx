@@ -42,7 +42,7 @@ export default function Product() {
         />
         {productDetails}
         {nutrients}
-        <button onClick={() => navigate(-1)} className="btn">
+        <button onClick={() => navigate(-1)} className="btn margin-5">
           Go back
         </button>
       </section>
