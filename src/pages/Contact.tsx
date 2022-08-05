@@ -1,21 +1,27 @@
-// npm
+// files
 import Form from "../components/Form";
-import Map from "../components/Map";
+import ContactMap from "../components/Map";
+import img from "../assets/images/general/owner.jpg";
 
 export default function Contact() {
   return (
-    <div className="contact">
-      <div className="hours">
-        <h2>opening hours</h2>
-        <p>mon to fri : 11 - 20</p>
-        <p>saturday : 11 - 22</p>
-        <p>sunday : closed</p>
-      </div>
-      <div className="booking">
-        <h2>booking form</h2>
-        <Form />
-      </div>
-      <Map />
-    </div>
+    <main>
+      <section className="sub-hero">
+        <img
+          src={img}
+          alt="owner of resturant"
+          className="tertiary-banner shadow"
+        />
+        <div className="hours">
+          <p>mon to fri : 11 - 20</p>
+          <p>saturday : 11 - 22</p>
+          <p>sunday : closed</p>
+        </div>
+        <div className="booking">
+          <Form />
+        </div>
+        <ContactMap />
+      </section>
+    </main>
   );
 }

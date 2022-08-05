@@ -3,23 +3,24 @@ export default function Form() {
   function onSubmit() {}
   return (
     <form onSubmit={onSubmit}>
-      <label>
-        Full Name
-        <input type="text" placeholder="Full Name" />
-      </label>
-      <label>
-        Email
-        <input type="email" name="" id="" placeholder="Email" />
-      </label>
-      <label>
-        Booking Date
-        <input type="date" name="" id="" />
-      </label>
-      <label>
-        Booking Time
-        <input type="time" name="" id="" />
-      </label>
-      <button>Submit</button>
+      <div className="input-container">
+        <input type="text" name="name" required />
+        <label htmlFor="name" className="label">
+          <span className="span">Name</span>
+        </label>
+      </div>
+      <div className="input-container">
+        <input type="email" name="email" required />
+        <label htmlFor="email" className="label">
+          <span className="span">Email</span>
+        </label>
+      </div>
+      <div className="input-container">
+        <input type="date" name="date" required />
+      </div>
+      <div className="input-container">
+        <input type="time" name="time" required />
+      </div>
     </form>
   );
 }

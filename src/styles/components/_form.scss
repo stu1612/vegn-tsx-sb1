@@ -1,0 +1,73 @@
+@use "../abstracts" as a;
+
+form {
+  width: 100%;
+  height: auto;
+  padding: 3rem 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: a.$primary-color-300;
+  margin: 5rem 0;
+  border-radius: 25px;
+
+  .input-container {
+    height: 50px;
+    margin: 2rem 0;
+    position: relative;
+    overflow: hidden;
+
+    input {
+      width: 100%;
+      height: 100%;
+      padding-top: 20px;
+      border: none;
+      background: transparent;
+      font-family: a.$text;
+      color: a.$grey-900;
+      outline: none;
+    }
+
+    .label {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      border-bottom: 1px solid a.$grey-700;
+      font-family: a.$special;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -1px;
+        height: 100%;
+        width: 100%;
+        border-bottom: 3px solid a.$secondary-color-300;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+      }
+    }
+
+    .span {
+      position: absolute;
+      bottom: 5px;
+      left: 0;
+      transition: all 0.3s ease;
+    }
+  }
+}
+
+.input-container input:focus + .label .span,
+.input-container input:valid + .label .span {
+  transform: translateY(-150%);
+  font-size: 1rem;
+  color: lighten(a.$grey-900, 30%);
+}
+
+.input-container input:focus + .label::after,
+.input-container input:valid + .label:after {
+  transform: translateY(0%);
+}

@@ -1,0 +1,19 @@
+@use "../abstracts" as a;
+
+.hours {
+  background: a.$secondary-color-300;
+  width: min(100%, 400px);
+  @include a.flex(column, center, center);
+  padding: 3rem 5rem;
+  border-radius: 25px;
+  margin-top: 5rem;
+
+  p {
+    margin: 1rem 0;
+  }
+}
+
+.booking {
+  width: min(100%, 400px);
+  @include a.flex(column, center, center);
+}

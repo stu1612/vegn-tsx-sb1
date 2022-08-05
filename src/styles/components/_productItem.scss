@@ -9,11 +9,15 @@
     font-size: 2.6rem;
     margin: 2rem 0;
   }
+}
 
-  .ingredients {
-    width: min(100%, 400px);
-    background: a.$primary-color-300;
-  }
+.ingredients {
+  width: min(100%, 400px);
+  background: a.$primary-color-300;
+}
+
+.menu-title {
+  display: none;
 }
 
 #nutrients {
@@ -66,6 +70,9 @@
 }
 
 @include a.media-md {
+  .ingredients {
+    background-color: a.$secondary-color-300;
+  }
   #nutrients {
     p {
       font-size: 1.6rem;

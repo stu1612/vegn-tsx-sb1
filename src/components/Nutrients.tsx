@@ -12,7 +12,7 @@ interface iProps {
 
 export default function Nutrients({ item }: iProps) {
   // local state
-  const [open, setOpen] = useState<boolean>(false);
+  const [open, setOpen] = useState<boolean>(true);
 
   // properties
   const { nutrients } = item;

@@ -9,12 +9,13 @@ interface iProps {
 
 export default function ProductItem({ item }: iProps) {
   // local state
-  const [open, setOpen] = useState<boolean>(false);
+  const [open, setOpen] = useState<boolean>(true);
   // properties
   const { subtitle, body, ingredients } = item;
 
   // components
   const Ingredients = ingredients.map((ing, index) => <p key={index}>{ing}</p>);
+
   return (
     <div className="content">
       <h1>{subtitle}</h1>
@@ -30,6 +31,7 @@ export default function ProductItem({ item }: iProps) {
         )}
         Ingredients
       </button>
+      <h2 className="menu-title">Ingredients</h2>
       {open && <div className="ingredients">{Ingredients}</div>}
     </div>
   );

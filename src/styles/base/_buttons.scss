@@ -28,3 +28,9 @@
 .selected {
   background: a.$primary-color-700;
 }
+
+@include a.media-md {
+  .btn-dropdown {
+    display: none;
+  }
+}
