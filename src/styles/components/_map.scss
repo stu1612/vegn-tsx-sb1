@@ -3,3 +3,7 @@
   height: 50vh;
   border-radius: 15px;
 }
+
+.leaflet-bottom {
+  z-index: 0 !important;
+}

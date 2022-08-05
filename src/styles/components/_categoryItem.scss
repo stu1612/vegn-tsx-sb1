@@ -3,7 +3,6 @@
 .grid {
   @include a.screen-width-lg;
   @include a.grid-card;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 
   &__content {
     @include a.flex(column, flex-start, center);
@@ -17,7 +16,6 @@
 .sub-grid {
   @include a.screen-width-lg;
   @include a.grid-card;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 
   &__img {
     @include a.flex(column, center, center);
@@ -32,8 +30,13 @@
   }
 }
 
-.card-title {
-  font-size: 2rem;
+@include a.media-xs {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  .sub-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
 }
 
 @include a.media-sm {
@@ -43,8 +46,5 @@
     &:nth-child(2n + 1) > div:first-child {
       grid-column: 2;
     }
-  }
-  .card-title {
-    font-size: 2.6rem;
   }
 }

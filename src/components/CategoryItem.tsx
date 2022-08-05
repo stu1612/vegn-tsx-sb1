@@ -19,8 +19,8 @@ export default function CategoryItem({ category }: iProps) {
         />
       </div>
       <div className="grid__content">
-        <h1 className="card-title">{title}</h1>
-        <p>{content}</p>
+        <h1 className="title">{title}</h1>
+        <p className="text">{content}</p>
         <Link to={`category/${title}`} state={image}>
           <button className="btn">View</button>
         </Link>

@@ -30,13 +30,6 @@
   }
 }
 
-.logo {
-  font-family: a.$heading;
-  font-size: 1.6rem;
-  position: absolute;
-  top: 100;
-}
-
 .light {
   background: a.$grey-100;
 }
@@ -51,6 +44,7 @@
 
 .mobile {
   height: 100vh;
+  z-index: 999;
 }
 
 .center {
@@ -73,12 +67,6 @@
     height: 100%;
     width: 100%;
     @include a.flex(column, center, space-around);
-  }
-}
-
-@include a.media-md {
-  .logo {
-    font-size: 2.6rem;
   }
 }
 

@@ -1,26 +1,22 @@
+// files
+import data from "../data/form.json";
+
 export default function Form() {
-  // method
-  function onSubmit() {}
-  return (
-    <form onSubmit={onSubmit}>
-      <div className="input-container">
-        <input type="text" name="name" required />
-        <label htmlFor="name" className="label">
-          <span className="span">Name</span>
+  // components
+  const Inputs = data.map((input) => (
+    <div className="input-container" key={input.id}>
+      <input
+        type={input.text}
+        name={input.text}
+        required={input.required}
+        autoFocus={input.autofocus}
+      />
+      {input.label && (
+        <label htmlFor={input.text} className="label">
+          <span className="span">{input.text}</span>
         </label>
-      </div>
-      <div className="input-container">
-        <input type="email" name="email" required />
-        <label htmlFor="email" className="label">
-          <span className="span">Email</span>
-        </label>
-      </div>
-      <div className="input-container">
-        <input type="date" name="date" required />
-      </div>
-      <div className="input-container">
-        <input type="time" name="time" required />
-      </div>
-    </form>
-  );
+      )}
+    </div>
+  ));
+  return <form>{Inputs}</form>;
 }

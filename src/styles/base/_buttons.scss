@@ -1,13 +1,13 @@
 @use "../abstracts" as a;
 
 .btn {
-  border: 1px solid a.$accent-dark-color-700;
+  border: 2px solid a.$accent-dark-color-500;
   padding: 1.3rem !important;
   border-radius: a.$borderRadius-4;
   @include a.transition-ease;
 
   &:hover {
-    background-color: a.$accent-dark-color-700;
+    background-color: a.$accent-dark-color-500;
     color: a.$grey-100;
   }
 }

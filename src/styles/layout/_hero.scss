@@ -5,7 +5,6 @@
 
   h1 {
     position: absolute;
-    font-size: 3.8rem;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -22,19 +21,7 @@
   @include a.flex(column, center, center);
   margin: 0 auto;
 
-  h1 {
-    font-size: 3.8rem;
-  }
-
   .margin-5 {
     margin: 5rem 0;
-  }
-}
-
-@include a.media-md {
-  .hero {
-    h1 {
-      font-size: 6.8rem;
-    }
   }
 }

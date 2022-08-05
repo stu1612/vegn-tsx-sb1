@@ -23,6 +23,12 @@
   width: min(80%, 960px);
 }
 
+@mixin media-xs {
+  @media screen and (min-width: 400px) {
+    @content;
+  }
+}
+
 @mixin media-sm {
   @media screen and (min-width: 688px) {
     @content;

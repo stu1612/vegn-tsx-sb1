@@ -24,10 +24,58 @@ button {
   text-decoration: none;
   color: inherit;
   font-family: a.$special;
-  font-weight: 200;
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.3rem;
-  font-size: 1.6rem;
-  transition: color 0.3s ease-in-out;
+  letter-spacing: 0.5rem;
+  font-size: 1.4rem;
+  @include a.transition-ease;
   cursor: pointer;
+}
+
+.link {
+  &:hover {
+    color: lighten(a.$grey-900, 20%);
+  }
+}
+
+.logo {
+  font-family: a.$heading;
+  font-size: 2.3rem;
+  position: absolute;
+  top: 100;
+  text-transform: capitalize;
+}
+
+.title {
+  font-size: 2rem;
+  white-space: normal;
+  word-break: break-word;
+}
+
+.heading-title {
+  font-size: 3.8rem;
+}
+
+.text {
+  font-size: 1.6rem;
+}
+
+@include a.media-lg {
+  .title {
+    font-size: 2.8rem;
+  }
+
+  .heading-title {
+    font-size: 8.8rem;
+  }
+
+  .text {
+    font-size: 1.8rem;
+  }
+}
+
+@include a.media-md {
+  .logo {
+    font-size: 3.6rem;
+  }
 }

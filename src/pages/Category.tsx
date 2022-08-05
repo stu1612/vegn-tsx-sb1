@@ -29,7 +29,7 @@ export default function Category() {
           src={require(`../assets/images/category/${image}`)}
           alt={title}
         />
-        <h1 className="bright">{title}</h1>
+        <h1 className="bright heading-title">{title}</h1>
         <Wave />
       </section>
       {menuItems}

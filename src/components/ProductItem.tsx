@@ -18,8 +18,8 @@ export default function ProductItem({ item }: iProps) {
 
   return (
     <div className="content">
-      <h1>{subtitle}</h1>
-      <p>{body}</p>
+      <h1 className="title">{subtitle}</h1>
+      <p className="text-small">{body}</p>
       <button
         className={`btn-dropdown ${open && "selected"}`}
         onClick={() => setOpen(!open)}
@@ -31,7 +31,6 @@ export default function ProductItem({ item }: iProps) {
         )}
         Ingredients
       </button>
-      <h2 className="menu-title">Ingredients</h2>
       {open && <div className="ingredients">{Ingredients}</div>}
     </div>
   );
