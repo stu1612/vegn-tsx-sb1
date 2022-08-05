@@ -15,7 +15,14 @@ export const hideTitle = {
   visible: {
     opacity: 1,
   },
-  hidden: { opacity: 0 },
+  hidden: {
+    opacity: 0,
+    transition: {
+      type: "spring",
+      bounce: 0.1,
+      duration: 1.2,
+    },
+  },
 };
 
 export const top = {
@@ -46,5 +53,21 @@ export const bottom = {
   },
   closed: {
     opacity: 1,
+  },
+};
+
+export const cardOnScroll = {
+  offscreen: {
+    y: 50,
+    opacity: 0,
+  },
+  onscreen: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: "spring",
+      bounce: 0.4,
+      duration: 0.8,
+    },
   },
 };

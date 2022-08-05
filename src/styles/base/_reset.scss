@@ -14,14 +14,14 @@ body {
   height: 100%;
   line-height: 1;
   width: 100vw;
-  -ms-overflow-style: none; /* for Internet Explorer, Edge */
-  scrollbar-width: none; /* for Firefox */
-  overflow-y: scroll;
+  // -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  // scrollbar-width: none; /* for Firefox */
+  // overflow-y: scroll;
 }
 
-body::-webkit-scrollbar {
-  display: none; /* for Chrome, Safari, and Opera */
-}
+// body::-webkit-scrollbar {
+//   display: none; /* for Chrome, Safari, and Opera */
+// }
 
 html {
   font-size: 62.5%;

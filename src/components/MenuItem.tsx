@@ -1,5 +1,9 @@
 // npm
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+
+// files
+import { cardOnScroll } from "../animations/variants";
 
 interface iProps {
   item: iMenuItem;
@@ -9,7 +13,13 @@ export default function MenuItem({ item }: iProps) {
   const { slug, subtitle, thumbnail, body } = item;
 
   return (
-    <div className="sub-grid">
+    <motion.div
+      className="sub-grid"
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ once: true, amount: 0.8 }}
+      variants={cardOnScroll}
+    >
       <div className="sub-grid__img">
         <img
           src={require(`../assets/images/menu/${thumbnail}`)}
@@ -24,6 +34,6 @@ export default function MenuItem({ item }: iProps) {
           <button className="btn">View</button>
         </Link>
       </div>
-    </div>
+    </motion.div>
   );
 }

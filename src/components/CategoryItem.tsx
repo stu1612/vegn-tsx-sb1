@@ -1,5 +1,9 @@
 // npm
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+
+// files
+import { cardOnScroll } from "../animations/variants";
 
 interface iProps {
   category: iCategories;
@@ -10,7 +14,13 @@ export default function CategoryItem({ category }: iProps) {
   const { title, content, image } = category;
 
   return (
-    <section className="grid">
+    <motion.section
+      className="grid"
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ once: true, amount: 0.8 }}
+      variants={cardOnScroll}
+    >
       <div>
         <img
           src={require(`../assets/images/category/${image}`)}
@@ -25,6 +35,6 @@ export default function CategoryItem({ category }: iProps) {
           <button className="btn">View</button>
         </Link>
       </div>
-    </section>
+    </motion.section>
   );
 }

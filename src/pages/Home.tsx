@@ -37,7 +37,7 @@ export default function Home() {
         <motion.h1
           variants={hideTitle}
           animate={hidden ? "hidden" : "visible"}
-          transition={{ ease: "easeInOut", duration: 0.3 }}
+          className="heading-title"
         >
           Vegarian
         </motion.h1>

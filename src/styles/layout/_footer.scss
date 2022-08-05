@@ -1,0 +1,13 @@
+@use "../abstracts" as a;
+
+.footer {
+  height: 10vh;
+  margin-top: 20vh;
+  @include a.flex(row, center, center);
+  text-transform: uppercase;
+  background-color: a.$accent-light-color-300;
+
+  p {
+    font-size: 1.2rem;
+  }
+}
